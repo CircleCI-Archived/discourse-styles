@@ -1,0 +1,51 @@
+.topic-list {
+  .btn {
+    border: none;
+    
+    &:hover {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  th {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #343434;
+  }
+
+  a.title {
+    color: #343434;
+  }
+
+  .topic-excerpt {
+    font-size: 1.6rem;
+    color: #555;
+  }
+
+  tbody {
+    tr {
+      border-bottom: 2px solid #ddd;
+      
+      &:first-of-type {
+        border-top: 2px solid #ddd;
+      }
+    }
+    
+    .num {
+      font-size: 1.6rem;
+      color: #343434;
+
+      a.badge-posts {
+        font-weight: 300;
+        color: #343434;
+      }
+    }
+
+    .discourse-tag.simple {
+      font-size: 1.2rem;
+      color: #555;
+    }
+  }
+}

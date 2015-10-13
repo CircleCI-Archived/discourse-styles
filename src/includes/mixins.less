@@ -1,0 +1,12 @@
+.font-face(@font, @weight, @style: normal) {
+  @font-face{
+    font-family: @font;
+    src:url('https://dmmj3mmt94rvw.cloudfront.net/webfonts/@{font}@{weight}.eot');
+    src:url('https://dmmj3mmt94rvw.cloudfront.net/webfonts/@{font}@{weight}.eot?#iefix') format('embedded-opentype'),
+        url('https://dmmj3mmt94rvw.cloudfront.net/webfonts/@{font}@{weight}.woff') format('woff'),
+        url('https://dmmj3mmt94rvw.cloudfront.net/webfonts/@{font}@{weight}.ttf') format('truetype'),
+        url('https://dmmj3mmt94rvw.cloudfront.net/webfonts/@{font}@{weight}.svg#icon') format('svg');
+    font-weight: @weight;
+    font-style: @style;
+  }
+}
