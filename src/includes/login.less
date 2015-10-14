@@ -1,0 +1,40 @@
+.modal.login-modal,
+.create-account {
+  #login-buttons {
+    .btn.github {
+      background-color: #fbfbfb;
+      color: #343434;
+
+      &:hover {
+        &::before {
+          content: "\f09b";
+          position: static;
+          display: inline;
+          margin-right: 9px;
+          background-color: transparent;
+          opacity: 1;
+          font-family: FontAwesome;
+          font-size: 1.7rem;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          background-color: @normal-text-color;
+          opacity: 0.05;
+          pointer-events: none;
+        }    
+      }
+    }
+  }
+
+  #login-link,
+  #new-account-link {
+    padding-left: 15px;
+  }
+}

@@ -1,18 +1,103 @@
 .d-header {
-  background-color: #ffffff;
+  height: 64px;
+  padding-top: 6px;
+  background-color: #fff;
   box-shadow: 0 2px 4px -1px rgba(52, 52, 52, 0.25);
+
   .header-dropdown-toggle {
     margin-right: 30px;
     &:last-child {
       margin-right: 0;
     }
   }
+  
   .fa {
-    color: #343434;
+    color: @normal-text-color;
   }
+  
   .logo-big {
     content: url('https://discuss.circleci.com/uploads/default/original/1X/6baad892872dca68a39f2458804d8085b2f4f502.png');
     margin-top: 10px;
     height: 20px;
+  }
+  
+  .logo-small {
+    content: url('https://discuss.circleci.com/uploads/default/original/1X/f279c4e134926f50d8cccad0abc7f153bb2a1994.png');
+    margin-top: 10px;
+    height: 19px;
+  }
+  
+  .topic-link {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  .badge-wrapper.bullet span.badge-category {
+    color: @normal-text-color !important;
+  }
+
+  .title-wrapper {
+    h1 {
+      line-height: 0.8em;
+    }
+  }
+
+  .login-button,
+  button.sign-up-button {
+    padding: 10px 20px;
+    border: none;
+    margin-top: 1px;
+    font-size: 1.4rem;
+
+    &:hover {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .login-button {
+    background: transparent;
+
+    .fa {
+      display: none;
+    }
+  }
+
+  .sign-up-button {
+    background-color: @green;
+    color: #fff;
+  }
+
+  .icons {
+    margin-top: -3px;
+    margin-left: 4px;
+
+    li {
+      margin-right: 20px;
+      
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+    
+    .fa {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      &.fa-bars {
+        font-size: 2rem;
+      }
+      &.fa-search {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  img.avatar {
+    width: 40px;
+    height: 40px;
   }
 }

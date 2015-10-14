@@ -32,7 +32,7 @@
         background-color: transparent !important;
         padding: 10px 0 !important;
         text-transform: capitalize;
-        color: #343434 !important;
+        color: @normal-text-color !important;
       }
       
       .category-dropdown-button {
@@ -61,17 +61,17 @@
 
     a {
       padding: 11px 12px;
-      color: #343434;
+      color: @normal-text-color;
       &:hover {
-        background-color: rgba(51, 121, 182, 0.1) !important;
-        color: #337ab7;
+        background-color: @hover-blue-background !important;
+        color: @active-text-color;
       }
     }
     
     .active {
       a {
         background-color: transparent;
-        color: #337ab7;
+        color: @active-text-color;
       }
     }
   }
