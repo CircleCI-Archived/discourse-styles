@@ -1,0 +1,51 @@
+section.user-main {
+  margin-top: -12px;
+  
+  .btn {
+    border: none;
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+      color: @normal-text-color;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .about {
+    width: 100vw;
+    margin-left: ~"calc(-50vw + 50%)";
+    background-color: #fff;
+
+    .btn {
+      text-align: right;
+      
+      .fa {
+        display: none;
+      }
+    }
+    
+    .btn-danger {
+      color: @normal-text-color;
+
+      &:hover {
+        color: @normal-text-color;
+      }
+    }
+
+    .details {
+      margin-top: -200px;
+      padding: 0;
+      background-color: #fbfbfb;
+
+      .primary {
+        float: none;
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
