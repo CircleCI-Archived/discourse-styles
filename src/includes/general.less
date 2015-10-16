@@ -7,12 +7,17 @@ body {
   font-weight: 300;
   font-size: 1.6rem;
   color: #333;
+
+  button {
+    font-family: @font-family;
+  }
 }
 
 #main-outlet {
   box-sizing: border-box;
   width: 100%;
   max-width: none;
+  padding: 82px 0 0 0;
 }
 
 .badge-category-bg {
@@ -25,7 +30,15 @@ body {
   span.badge-category {
     font-size: 1.4rem;
     color: @normal-text-color !important;
-  }  
+  }
+
+  span.badge-category-parent-bg {
+    display: none;
+
+    & + .badge-category-bg {
+      width: 10px;
+    }
+  }
 }
 
 .btn {
@@ -56,5 +69,48 @@ body {
       pointer-events: none;
     }    
   }
+}
 
+.btn-primary {
+  &:active {
+    background-color: #fbfbfb;
+    background-image: none;
+    color: @normal-text-color;
+  }
+}
+
+.groups, .group-link {
+  color: @active-text-color;
+}
+
+a {
+  color: @active-text-color;
+
+  &:visited {
+    color: @active-text-color;
+  }
+}
+
+.badge-notification.new-topic {
+  color: @active-text-color;
+}
+
+.alert.alert-info {
+  background-color: rgb(235, 242, 248);
+  border-radius: 6px;
+  border: 1px solid #337ab7;
+  padding: 20px;
+  color: @normal-text-color;
+}
+
+button[title="topic admin actions"] {
+  box-sizing: border-box;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+}
+
+img.avatar {
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(52, 52, 52, 0.25);
 }

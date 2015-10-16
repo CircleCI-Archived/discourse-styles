@@ -14,14 +14,40 @@
   }
 
   th {
+    position: relative;
     font-size: 1.4rem;
     font-weight: 700;
     color: @normal-text-color;
+
+    .bulk-select .fa {
+      color: #ddd;
+    }
+
+    &.sortable:hover {
+      background-color: #fbfbfb;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: @normal-text-color;
+        opacity: 0.05;
+        pointer-events: none;
+      }
+    }
   }
 
   td, th {
     padding-top: 20px;
     padding-bottom: 20px;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
   }
 
   a.title {
@@ -29,8 +55,18 @@
     color: @normal-text-color;
   }
 
-  .topic-statuses .topic-status i {
-    font-size: 1.6rem;
+  .topic-statuses {
+    position: relative;
+    bottom: 2px;
+    
+    .topic-status {
+      margin-right: 7px;
+      
+      i {
+        font-size: 1.5rem;
+        color: #ddd;
+      }
+    }
   }
 
   .topic-excerpt {
@@ -41,7 +77,7 @@
 
   tbody {
     tr {
-      border-bottom: 2px solid #ddd;
+      border-bottom: 1px solid #ddd;
       
       &:first-of-type {
         border-top: 2px solid #ddd;
@@ -62,5 +98,15 @@
       font-size: 1.2rem;
       color: #555;
     }
+  }
+}
+
+.topic-list-bottom {
+  margin-top: 40px;
+  
+  h3 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: @normal-text-color;
   }
 }

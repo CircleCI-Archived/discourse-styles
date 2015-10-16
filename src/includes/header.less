@@ -16,15 +16,15 @@
   }
   
   .logo-big {
-    content: url('https://discuss.circleci.com/uploads/default/original/1X/6baad892872dca68a39f2458804d8085b2f4f502.png');
-    margin-top: 10px;
-    height: 20px;
+    content: url('https://discuss.circleci.com/uploads/default/original/1X/6bb0a5421f90d773f963b5fc8b18ab0459225472.png');
+    margin-top: 5px;
+    height: 30px;
   }
   
   .logo-small {
     content: url('https://discuss.circleci.com/uploads/default/original/1X/f279c4e134926f50d8cccad0abc7f153bb2a1994.png');
-    margin-top: 10px;
-    height: 19px;
+    margin-top: 5px;
+    height: 30px;
   }
   
   .topic-link {
@@ -77,9 +77,58 @@
 
     li {
       margin-right: 20px;
+
+      a.icon {
+        position: relative;
+        color: @normal-text-color;
+
+        &:hover {
+          background-color: #fbfbfb;
+          color: @normal-text-color;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: @normal-text-color;
+            opacity: 0.05;
+            pointer-events: none;
+          }
+        }
+      }
       
       &:first-child {
         margin-right: 10px;
+      }
+
+      &:last-child {
+        position: relative;
+        
+        a.icon {
+          margin-left: 3px;
+          padding-left: 0;
+          padding-right: 0;
+
+          &:hover {
+            background-color: transparent;
+            border-color: transparent;
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+        
+        .unread-private-messages {
+          position: absolute;
+          left: -4px;
+          top: -9px;
+          background-color: transparent;
+          color: @normal-text-color;
+        }
       }
     }
     
@@ -99,5 +148,61 @@
   img.avatar {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(52, 52, 52, 0.25);
+  }
+
+  
+  .notifications {
+    li {
+      position: relative;
+      
+      &:hover {
+        background-color: #fbfbfb;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #343434;
+          opacity: 0.05;
+          pointer-events: none;
+        }
+      }
+
+      &.last {
+        a {
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-panel ul.menu-links {
+    li {
+      a:hover {
+        position: relative;
+        background-color: #fbfbfb;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #343434;
+          opacity: 0.05;
+          pointer-events: none;
+        }
+      }
+    }
   }
 }
