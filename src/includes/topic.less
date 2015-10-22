@@ -36,14 +36,17 @@
   
   .topic-body {
     @avatar-width: 45px;
+    @padding-left: 21px;
+    @reserved-width: @avatar-width + @padding-left;
+    padding-top: 16px;
+    padding-left: @padding-left;
     box-sizing: border-box;
-    width: ~"calc(100% - @{avatar-width})";
+    width: ~"calc(100% - @{reserved-width})";
     background-color: #fff !important; // prevent background color animation
-    padding-left: 0;
 
     .contents {
       margin-top: 40px;
-      margin-left: -@avatar-width;
+      margin-left: -@reserved-width;
       width: ~"calc(100% + @{avatar-width})";
       line-height: 1.5;
     }
