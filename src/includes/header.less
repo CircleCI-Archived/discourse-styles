@@ -212,4 +212,24 @@
       box-shadow: 0 2px 4px 0 rgba(52, 52, 52, 0.25);
     }
   }
+
+  .search-menu {
+    
+    li:not(.category):not(.heading):hover a:not(.badge-notification) {
+      position: relative;
+      background-color: transparent;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: @normal-text-color;
+        opacity: 0.05;
+        pointer-events: none;
+      }
+    }
+  }
 }
