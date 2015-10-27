@@ -219,5 +219,25 @@ div.education {
 .body-page {
   .wrapper();
   padding-left: 0;
+
+  .nav-pills {
+    margin-left: -12px;
+
+    li a {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: @normal-text-color;
+
+      &:hover {
+        color: @active-text-color;
+        background-color: rgba(51,121,182,0.1);
+      }
+
+      &.active {
+        background-color: transparent;
+        color: @active-text-color;
+      }
+    }
+  }
 }
 
