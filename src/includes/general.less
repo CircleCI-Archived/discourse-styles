@@ -6,6 +6,7 @@ body {
   font-family: ProximaNova;
   font-weight: 300;
   font-size: 1.5rem;
+  line-height: 1.5;
   color: #333;
 
   button {
@@ -118,10 +119,6 @@ a {
   }
 }
 
-.badge-notification.new-topic {
-  color: @active-text-color;
-}
-
 .alert.alert-info {
   background-color: rgb(235, 242, 248);
   border-radius: 6px;
@@ -215,10 +212,10 @@ a.mention {
 .education {
   color: #555;
   line-height: 1.5;
+}
 
-  .new-topic.badge-notification {
-    width: auto;
-  }
+.new-topic.badge-notification {
+  width: auto;
 }
 
 .body-page {
@@ -250,6 +247,10 @@ a.mention {
 .search-title,
 .fps-result,
 .search-footer {
+  .wrapper();
+}
+
+.search.row + .ember-view {
   .wrapper();
 }
 

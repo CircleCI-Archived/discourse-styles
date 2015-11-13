@@ -41,6 +41,10 @@
     }
   }
 
+  td {
+    color: #555;
+  }
+
   td, th {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -116,6 +120,19 @@
 
     table.categoryStats td {
       padding: 4px;
+    }
+  }
+
+  .badge-notification.new-topic {
+    color: @active-text-color;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 0;
+    
+    &::before {
+      position: relative;
+      bottom: 1px;
     }
   }
 }

@@ -69,10 +69,11 @@ section.user-main {
       .primary-textual {
 
         h1 {
+          padding: 12px;
           text-align: left;
           text-transform: uppercase;
           font-size: 1.6rem;
-          color: #333;
+          color: #343434;
         }
 
         h2 {
@@ -264,10 +265,16 @@ section.user-main {
       }
     }
 
-    .user-stream .excerpt {
-      color: @normal-text-color;
-      margin: 12px 0;
-      padding-left: 49px;
+    .user-stream {
+      .avatar-link {
+        margin-right: 12px;
+      }
+      
+      .excerpt {
+        color: @normal-text-color;
+        margin: 12px 0;
+        padding-left: 57px;
+      }
     }
   }
 
