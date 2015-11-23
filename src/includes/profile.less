@@ -66,7 +66,7 @@ section.user-main {
         }
       }
 
-      .primary-textual {
+      .primary .primary-textual {
 
         h1 {
           padding: 12px;
@@ -80,8 +80,11 @@ section.user-main {
           display: none;
         }
 
-        h3:first-of-type {
+        h3 {
           text-align: left;
+        }
+
+        h3:first-of-type {
           text-transform: uppercase;
           font-size: 1.2rem;
           font-weight: 700;
@@ -92,6 +95,10 @@ section.user-main {
           font-family: @font-family;
           color: #555;
           text-align: left;
+        }
+
+        a[href] {
+          color: @normal-text-color;
         }
       }
     }
